@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+header{
+ 
+    height: 100px;
+    background-color: #000;
+    color: #FFF;
+    
+}
+.header{
+    width: 1140px;
+    height: 100px;
+    align-items: center;
+
+   margin: auto; /*alinha no meio quando o site for responsivo*/ 
+   display: flex; /* o conteúdo dentro do header será flex */
+    
+}
+.logo{
+    width: 100px;
+
+}
+
+.logoimg{
+    width:  80px;
+    height: 80px;
+    background-color: #B28756;
+    
+    }
+    
+
+.menu {
+    flex: 1;
+       
+}
+
+.menu ul, .menu li{
+  
+list-style: none;
+justify-content: flex-end;
+}
+.menu ul {
+    display: flex;
+}
+.menu li a{
+color: #FFF;
+text-transform: uppercase;
+font-weight: 600;
+text-decoration: none;
+padding-left: 18px;
+padding-right: 18px;
+display: flex;
+height: 100px;
+align-items: center;    /* por causa do display flex e pela altura que foi posta, os itens vao pra cima do bloco, por isso o align-items ( para coloca-los no centro */
+border-bottom: 5px solid #000; /* essa borda na tag A de mesmo tamanho que a borda do a:hover faz com que os LI nao saltem quando o mouse passar por cima */
+
+}
+
+.menu li a:hover,
+.menu .active a
+{
+    border-bottom: 5px solid #B28756;
+}
+
+.banner{
+  
+    height: calc(100vh - 100px);
+    background-color:  #333; /* imagem de background, caso a imagem do banner nao carregue */
+    background-image: url(../images/bg.jpg);
+    background-size: cover; /*preencha a imagem toda */
+    background-position: bottom; /* priorize a parte de baixo */
+    overflow: hidden    ;
+}
+
+.banner .sliders{
+display: flex;
+width:  310vw;
+height: 100%;
+
+
+}
+.banner .slide{
+width: 100vw;
+height: 100%;
+justify-content: center;
+align-items: center;
+display: flex;
+background-color: rgba(0,0 ,0 ,0.8);
+
+}
+.banner .slidearea{
+
+display: flex;
+flex-direction: column;
+height: 100%;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
+.banner h1{
+text-transform: uppercase;
+font-weight: bold;
+font-size: 50px;
+
+}
+.banner h1 span{
+    color :#B28756
+}
+.banner h2 {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.button {
+background-color: #B28756;
+color: #FFF;
+margin-top: 30px;
+padding: 15px 30px;
+border-radius: 20px;
+text-decoration: none;
+font-size: 16px;
+
+}
+
+.default{
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.default .section-title,
+.default .section-desc{
+    text-align: center;
+ 
+}
+.default .section-title {
+    font-size:20px;
+    font-weight: 600;
+}
+.default .section-desc{
+    font: size 12px;
+    color: #ccc;
+    margin-top: 10px;
+    margin-bottom:40px;
+    font-weight: 600;
+
+}
+
+.default .section-body{
+max-width: 1140px;
+margin: auto;
+min-height: 100px;
+
+
+}
+.default.light {
+    background-color: #F7F7F7;
+}
+.default.light .section-title,
+.default.light .section-body
+{
+ color: #000;
+}
+.default.dark {
+    background-color: #000;
+}
+.default.dark .section-title,
+.default.dark .section-body
+{
+   color: #F7F7F7;
+}
+
+
+
+
+
+
+
+
+
+/* areas específica */
+
+
+.section-aboutus--left{
+flex: 1;
+margin-right: 30px;
+
+}
+.section-aboutus--left p{
+    
+    font-size: 16px;
+    font-family: 600 ;
+    line-height: 25px
+}
+.section-aboutus--right{
+    width: 500px;
+    text-align: center;
+}
+.section-aboutus--right img{
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+
+
+
+.section-services{
+    display: flex;
+    width: 100%;
+   justify-content: center;
+
+
+   
+    
+}
+.section-service{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+align-items: center;
+justify-content: center;
+border-left: 1px solid #ccc;
+  
+}
+
+.section-service span{
+
+    text-transform: uppercase;
+    margin-top: 17px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+  
+  
+}
+
+/* section 2 */
+
+.section-projects{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+
+}
+.section-projects--filters{
+    display: flex;
+    border: 1px solid #ddd;
+background-color: #eee;
+border-radius: 30px;
+padding: 0px 20px;
+
+}
+.section-projects--filters ul{
+ list-style: none;
+ 
+                                      /* se o ul nao for declarado como display flex, o li terá que ser declarado como display:inline-block;*/
+ 
+}
+.section-projects--filters li{
+                               /* vc pode usar tanto display: inline-block ou display:flex */
+    display: inline-block;
+    padding: 10px;
+    font-size: 13px;
+    border-left: 1px solid #CCC;
+}
+
+.section-projects--filters :first-child{
+    border-left: 0;
+}
+.section-projects--filters li a{
+  
+
+text-decoration: none;
+color: #000;
+height: 36px;
+
+}
+.section-projects--filters li a:hover{
+border-bottom: 3px solid #B28756;
+padding-bottom: 10px;
+
+}
+
+.section-projects--photos{
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+
+.section-projects--photo{
+    width: 280px;
+}
+
+.section-projects--photoarea img{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.section-projects--photoinfo{
+    display: none;
+}
+
